@@ -1,0 +1,27 @@
+.not-fill{
+       -fx-border-color : red;
+}
+.text-field, .combo-box{
+    -fx-background-radius : 10;
+    -fx-border-radius:10;
+}
+.otp, .addhar-no, .date-picker {
+    -fx-background-radius : 10 0 0 10;
+    -fx-border-radius : 10 0 0 10;
+}
+.pisv{
+    -fx-background-radius : 20;
+    -fx-border-radius:20;
+    -fx-background-color : green;
+
+}
+.rf {
+    -fx-text-fill:green;
+    -fx-background-color :white ;
+    -fx-border-color:green;
+}
+.dc{
+    -fx-background-color:#004f00;
+}
+
+

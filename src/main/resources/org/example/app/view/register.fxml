@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="633.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.app.controller.registerController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#5dbf52" height="68.0" layoutY="21.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0" />
+      <ImageView fitHeight="36.0" fitWidth="39.0" layoutX="385.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/bank-41-16.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="21.0" layoutY="56.0" prefHeight="34.0" prefWidth="183.0" text="Registration Form" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="27.0" prefHeight="36.0" prefWidth="214.0" text="Bank Account" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="432.0" layoutY="37.0" prefHeight="38.0" prefWidth="134.0" text="AmarBank" textFill="#fffdfd">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+      <Accordion fx:id="accordion" layoutY="89.0" prefHeight="542.0" prefWidth="600.0">
+        <panes>
+          <TitledPane fx:id="t1" animated="false" prefHeight="466.0" prefWidth="600.0" text="Personal Information">
+            <content>
+              <AnchorPane fx:id="personsl_info" minHeight="0.0" minWidth="0.0" prefHeight="443.0" prefWidth="614.0">
+                     <children>
+                        <TextField fx:id="fullName" layoutX="67.0" layoutY="28.0" onMouseClicked="#getFocus" prefHeight="26.0" prefWidth="175.0" promptText="Full name" />
+                        <DatePicker fx:id="dob" layoutX="353.0" layoutY="28.0" onMouseClicked="#getFocus" prefHeight="0.0" prefWidth="175.0" promptText="MM/DD/YYYY">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></DatePicker>
+                        <RadioButton fx:id="male" layoutX="67.0" layoutY="64.0" mnemonicParsing="false" onMouseClicked="#getFocusRadio" prefHeight="26.0" prefWidth="62.0" text="Male">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </RadioButton>
+                        <RadioButton fx:id="female" layoutX="130.0" layoutY="67.0" mnemonicParsing="false" onMouseClicked="#getFocusRadio" text="Female">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </RadioButton>
+                        <RadioButton fx:id="other" layoutX="210.0" layoutY="67.0" mnemonicParsing="false" onMouseClicked="#getFocusRadio" text="Others">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </RadioButton>
+                        <TextField fx:id="phoneNumber" layoutX="354.0" layoutY="119.0" onMouseClicked="#getFocus" prefHeight="26.0" prefWidth="123.0" promptText="Phone Number" styleClass="phno" />
+                        <TextField fx:id="address" layoutX="68.0" layoutY="235.0" onMouseClicked="#getFocus" prefHeight="26.0" prefWidth="462.0" promptText="Address" />
+                        <TextField fx:id="po" layoutX="67.0" layoutY="282.0" onMouseClicked="#getFocus" prefHeight="26.0" prefWidth="143.0" promptText="P. O." />
+                        <TextField fx:id="city" layoutX="225.0" layoutY="282.0" onMouseClicked="#getFocus" prefHeight="26.0" prefWidth="148.0" promptText="City / Village" />
+                        <TextField fx:id="pincode" layoutX="393.0" layoutY="282.0" onMouseClicked="#getFocus" prefHeight="26.0" prefWidth="134.0" promptText="Pincode" />
+                        <ComboBox fx:id="occupation" layoutX="66.0" layoutY="119.0" onMouseClicked="#getFocus" prefHeight="26.0" prefWidth="177.0" promptText="Occupation" visibleRowCount="5">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></ComboBox>
+                        <TextField fx:id="panNumber" layoutX="353.0" layoutY="73.0" prefHeight="26.0" prefWidth="175.0" promptText="Pan Number" />
+                        <Button fx:id="cancel" focusTraversable="false" layoutX="67.0" layoutY="377.0" mnemonicParsing="false" onAction="#cancel" prefHeight="34.0" prefWidth="61.0" style="-fx-background-color: red; -fx-background-radius: 20;" text="Cancel" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="pISV" focusTraversable="false" layoutX="428.0" layoutY="377.0" mnemonicParsing="false" onAction="#savePI" onMouseEntered="#dc" onMouseExited="#cd" onMousePressed="#fc" onMouseReleased="#fv" prefHeight="34.0" prefWidth="99.0" styleClass="pisv" text="Save &amp; Next" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <TextField fx:id="otpPI" layoutX="353.0" layoutY="166.0" prefHeight="26.0" prefWidth="128.0" promptText="OTP" styleClass="otp" />
+                        <Button fx:id="verify" focusTraversable="false" layoutX="480.0" layoutY="166.0" mnemonicParsing="false" onAction="#otpverify" prefHeight="26.0" prefWidth="46.0" style="-fx-background-radius: 0 10 10 0;" text="Verify">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                        <Button fx:id="sendOtpToNumber" focusTraversable="false" layoutX="465.0" layoutY="119.0" mnemonicParsing="false" onAction="#sendOtpNumber" prefHeight="26.0" prefWidth="68.0" style="-fx-background-radius: 0 10 10 0;" text="Send OTP">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                        <Label fx:id="otpVerified" layoutX="355.0" layoutY="192.0" prefHeight="1.0" prefWidth="171.0" textAlignment="CENTER" textFill="#50bf0c">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="email" layoutX="67.0" layoutY="166.0" onMouseClicked="#getFocus" prefHeight="26.0" prefWidth="175.0" promptText="Email" />
+                        <ComboBox fx:id="state" layoutX="68.0" layoutY="328.0" onMouseClicked="#getFocus" prefHeight="26.0" prefWidth="164.0" promptText="State" visibleRowCount="5">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ComboBox>
+                        <ComboBox fx:id="district" layoutX="288.0" layoutY="328.0" onMouseClicked="#getFocus" prefHeight="26.0" prefWidth="238.0" promptText="District" visibleRowCount="5">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></ComboBox>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </TitledPane>
+          <TitledPane fx:id="t2" animated="false" text="Banking Details">
+            <content>
+              <AnchorPane fx:id="Banking_Details" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <RadioButton fx:id="sAcc" layoutX="89.0" layoutY="28.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="117.0" text="Savings Account">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></RadioButton>
+                        <RadioButton fx:id="cAcc" layoutX="352.0" layoutY="29.0" mnemonicParsing="false" text="Current Account">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></RadioButton>
+                        <ComboBox fx:id="MLimit" layoutX="82.0" layoutY="78.0" prefWidth="150.0" promptText="Monthly Limit">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></ComboBox>
+                        <ComboBox fx:id="initDipos" layoutX="344.0" layoutY="78.0" prefWidth="150.0" promptText="Deposti Amount">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></ComboBox>
+                        <Button fx:id="svBD" focusTraversable="false" layoutX="389.0" layoutY="380.0" mnemonicParsing="false" onAction="#savePI" style="-fx-background-color: green; -fx-background-radius: 20;" text="Save &amp; Continue" textFill="WHITE">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                        <Button fx:id="cancelBD" focusTraversable="false" layoutX="82.0" layoutY="380.0" mnemonicParsing="false" style="-fx-background-color: red; -fx-background-radius: 20;" text="Cancel" textFill="WHITE">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                        <CheckBox fx:id="aggBD" alignment="TOP_LEFT" focusTraversable="false" layoutX="61.0" layoutY="264.0" mnemonicParsing="false" prefHeight="98.0" prefWidth="475.0" text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged." wrapText="true">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></CheckBox>
+                        <TextField fx:id="addhar" layoutX="83.0" layoutY="137.0" prefHeight="26.0" prefWidth="305.0" promptText="Addhar Number" styleClass="addhar-no" />
+                        <Button fx:id="sendOtpToAddhar" focusTraversable="false" layoutX="387.0" layoutY="137.0" mnemonicParsing="false" onAction="#sendotpAddhar" prefHeight="26.0" prefWidth="106.0" style="-fx-background-radius: 0 10 10 0;" text="Send OTP">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                        <TextField fx:id="otpBD" layoutX="170.0" layoutY="193.0" prefHeight="26.0" prefWidth="114.0" promptText="OTP" styleClass="otp" />
+                        <Button fx:id="verifyAdd" focusTraversable="false" layoutX="284.0" layoutY="193.0" mnemonicParsing="false" onAction="#otpverify" prefHeight="26.0" prefWidth="86.0" style="-fx-background-radius: 0 10 10 0;" text="Verify">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                        <Label fx:id="otpaddvarify" layoutX="174.0" layoutY="221.0" prefHeight="18.0" prefWidth="196.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </TitledPane>
+          <TitledPane fx:id="t3" animated="false" text="Document">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ComboBox fx:id="selfimage" layoutX="48.0" layoutY="30.0" prefHeight="26.0" prefWidth="206.0" promptText="Image *">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></ComboBox>
+                        <ComboBox fx:id="AddressProof" layoutX="48.0" layoutY="168.0" prefHeight="26.0" prefWidth="206.0" promptText="Address Proof *">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></ComboBox>
+                        <ComboBox fx:id="identityProofe" layoutX="48.0" layoutY="123.0" prefHeight="26.0" prefWidth="206.0" promptText="Identity Proof *">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></ComboBox>
+                        <Button fx:id="selfImgDoc" layoutX="289.0" layoutY="30.0" mnemonicParsing="false" onAction="#chooseFile" prefHeight="26.0" prefWidth="93.0" text="Choose File">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                        <Button fx:id="addressDoc" layoutX="289.0" layoutY="168.0" mnemonicParsing="false" onAction="#chooseFile" prefHeight="26.0" prefWidth="97.0" text="Choose File">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                        <Button fx:id="idDoc" layoutX="289.0" layoutY="123.0" mnemonicParsing="false" onAction="#chooseFile" prefHeight="26.0" prefWidth="94.0" text="Choose File">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                        <Button fx:id="submit" focusTraversable="false" layoutX="435.0" layoutY="374.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="99.0" style="-fx-background-color: green; -fx-background-radius: 20;" text="Submit" textFill="#fff9f9">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                        <Button fx:id="cancelD" focusTraversable="false" layoutX="61.0" layoutY="374.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="80.0" style="-fx-background-color: red; -fx-background-radius: 20;" text="Cancel" textFill="WHITE">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                        <Button fx:id="panDoc" layoutX="289.0" layoutY="219.0" mnemonicParsing="false" onAction="#chooseFile" prefHeight="26.0" prefWidth="98.0" text="Choose File">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                        <Label layoutX="59.0" layoutY="218.0" prefHeight="27.0" prefWidth="183.0" text="Pan card (if applicable)">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <CheckBox fx:id="aggD" alignment="TOP_LEFT" focusTraversable="false" layoutX="69.0" layoutY="308.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="475.0" text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, " wrapText="true">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></CheckBox>
+                        <ComboBox fx:id="BirthProof" layoutX="48.0" layoutY="74.0" prefHeight="26.0" prefWidth="206.0" promptText="Birth Proof *">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></ComboBox>
+                        <Button fx:id="birthDoc" layoutX="289.0" layoutY="74.0" mnemonicParsing="false" onAction="#chooseFile" prefHeight="26.0" prefWidth="93.0" text="Choose File">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                        <Label fx:id="imageDocName" layoutX="403.0" layoutY="30.0" prefHeight="26.0" prefWidth="161.0" />
+                        <Label fx:id="idDocName" layoutX="403.0" layoutY="123.0" prefHeight="26.0" prefWidth="161.0" />
+                        <Label fx:id="addressDocName" layoutX="407.0" layoutY="168.0" prefHeight="26.0" prefWidth="161.0" />
+                        <Label fx:id="panDocName" layoutX="403.0" layoutY="218.0" prefHeight="26.0" prefWidth="161.0" />
+                        <Label fx:id="birthDocName" layoutX="403.0" layoutY="74.0" prefHeight="26.0" prefWidth="161.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </TitledPane>
+        </panes>
+      </Accordion>
+   </children>
+</AnchorPane>
